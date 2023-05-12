@@ -85,7 +85,7 @@ function sum(numArray) {
 					numArray[i] = 0;
 				}
 			} else if (typeof numArray[i] === "object") {
-				throw new Error("Unsupported data type (object or array)"); //don't know if this is what's requested 
+				throw new Error("Unsupported data type (object or array)"); //don't know if this is what's requested
 			}
 			numSum += numArray[i];
 		}
@@ -101,12 +101,14 @@ function averageNumbers(numArray) {
 	let numSum = 0;
 	if (numArray.length === 0) {
 		return null;
-	} else {
+	}
+	return sum(numArray) / numArray.length; //reusing the sum() function I made in 3.2
+
+	/* } else {
 		for (let i = 0; i < numArray.length; i++) {
 			numSum += numArray[i];
 		}
-	}
-	return numSum / numArray.length;
+	} */
 }
 
 // Level 2: Array of strings
